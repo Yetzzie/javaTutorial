@@ -1,15 +1,12 @@
 import java.util.Scanner;
-import javax.swing.JOptionPane;
 public class hello {
     public static void main(String[] args) {
         Scanner myObj = new Scanner(System.in);
         boolean continueShopping = true;
         int stock1 = 30, stock2 = 30, stock3 = 30;
-
+        double total = 0, total2 = 0, total3 = 0;
         while (continueShopping) {
             int product, quantity, quantity2, quantity3;
-            double total, total2, total3;
-
             System.out.println("Please choose the product"  + "\n" + 
                                "press 1 for $1 Apple, Available stock is: " + stock1 + "\n" +   
                                "press 2 for 1.5$ Grapes, Available stock is: " + stock2 + "\n" + 
@@ -66,8 +63,8 @@ public class hello {
                     break;
 
                     case 4:
-                    JOptionPane.showMessageDialog(null, "GFG", "Geeks Premier League 2023",  
-                    JOptionPane.INFORMATION_MESSAGE); 
+                         double profit = total + total2 + total3;
+                        System.out.println("Total profit you earn is: $" + profit);
                     break;
             }
 
